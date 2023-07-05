@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+          crossorigin="anonymous">
+</head>
+<body>
+  <script src="index.js"></script>
+<main>
+    <div class="container">
+        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <h1>WASM Mandelbrot</h1>
+            <div class="lead">
+                This page uses the Rust fractal-rs library as a WASM component to demonstrate Rust WASM re-use.
+                The fractal-rs library is referenced as an external crate to the fractal-wasm component used
+                to integrate with the components on this page.
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Parameters</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="real">Center X:</label>
+                </div>
+                <div class="col-md-1">
+                    <input class="float-right" type="number" name="real" id="real" value="-0.5" step="0.001">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="imaginary">Center Y: </label>
+                </div>
+                <div class="col-md-1">
+                    <input type="number" name="imaginary" id="imaginary" value="0.0" step="0.001">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="iterations"> Iterations: </label>
+                </div>
+                <div class="col-md-1">
+                    <input type="number" name="iterations" id="iterations" value="100" step="1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="zoom">Zoom: </label>
+                </div>
+                <div class="col-md-1">
+                    <input type="number" name="zoom" id="zoom" value="0.75" step="0.1">
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-sm-4">&nbsp;</div>
+            <div class="col-md-1">
+                <button class="btn" id="render">Render</button>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                <canvas style="width: 600; height: 600;" id="fractal_canvas" width="600" height="600"></canvas>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+</main>
+</body>
+</html>
